@@ -1,0 +1,17 @@
+#!/bin/bash
+
+subcommand=$1
+shift
+
+case $subcommand in
+	show_local_directory_list | show_server_list | show_fqdn_list | show_application_list | \
+	install_remote_daemon | uninstall_remote_daemon | install_remote_repository | uninstall_remote_repository | \
+	install_local_daemon | uninstall_local_daemon | install_local_repository | uninstall_local_repository | \
+	install_ssl_certificate | uninstall_ssl_certificate | \
+	install_ssl_bot | uninstall_ssl_bot | install_deno_user | uninstall_deno_user )
+		~/.ksctl/subcommands/$subcommand.sh $@
+		;;
+	*)
+		cat ~/.ksctl/README.txt
+		;;
+esac
