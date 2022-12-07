@@ -4,7 +4,6 @@ _ksctl_completion() {
 		1)
 		  opts="\
 				show_states take_snapshot \
-				show_local_directory_list show_server_list show_fqdn_list show_application_list \
 				install_remote_daemon uninstall_remote_daemon install_remote_repository uninstall_remote_repository \
 				install_local_daemon uninstall_local_daemon install_local_repository uninstall_local_repository \
 				install_ssl_certificate uninstall_ssl_certificate \
