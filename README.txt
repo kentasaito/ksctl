@@ -8,7 +8,7 @@ Install
 	cp ~/.ksctl/ksctl.env.json.example ~/.ksctl/ksctl.env.json
 
 Entity Relationship
-	Edit ksctl.env.json before use
+	Edit ksctl.env.json and run 'ksctl take_snapshot' before use
 	- Your machine has one or more local directories
 	- Local directory has one or more Servers
 	- Server has one or more FQDNs
