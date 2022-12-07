@@ -11,6 +11,6 @@ export REMOTE_PORT=`jq -r ".application_list.\"$APPLICATION\".remote_port" < ~/.
 export FQDN=`jq -r ".application_list.$APPLICATION.fqdn" < ~/.ksctl/ksctl.env.json`
 export SERVER=`jq -r ".fqdn_list.\"$FQDN\".server" < ~/.ksctl/ksctl.env.json`
 
-envsubst < $(dirname $0)/_install_remote_daemon.sh | ssh root@$SERVER bash
+envsubst < `dirname $0`/_install_remote_daemon.sh | ssh root@$SERVER bash
 
 envsubst < `dirname $0`/../update_state/remote_deamon.sh | bash
