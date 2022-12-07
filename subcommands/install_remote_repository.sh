@@ -13,3 +13,5 @@ export LOCAL_DIRECTORY=`jq -r ".server_list.\"$SERVER\".local_directory" < ~/.ks
 envsubst < $(dirname $0)/_install_remote_repository.sh | ssh deno@$SERVER bash
 cd $LOCAL_DIRECTORY/$APPLICATION
 git push --set-upstream origin master
+
+envsubst < `dirname $0`/../update_state/remote_repository.sh | bash

@@ -11,3 +11,5 @@ export SERVER=`jq -r ".fqdn_list.\"$FQDN\".server" < ~/.ksctl/ksctl.env.json`
 export LOCAL_DIRECTORY=`jq -r ".server_list.\"$SERVER\".local_directory" < ~/.ksctl/ksctl.env.json`
 
 rm -rf $LOCAL_DIRECTORY/$APPLICATION
+
+envsubst < `dirname $0`/../update_state/local_repository.sh | bash

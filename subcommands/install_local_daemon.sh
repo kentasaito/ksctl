@@ -25,3 +25,5 @@ WantedBy=multi-user.target
 EOF
 sudo systemctl enable $APPLICATION.service
 sudo systemctl start $APPLICATION.service
+
+envsubst < `dirname $0`/../update_state/local_daemon.sh | bash

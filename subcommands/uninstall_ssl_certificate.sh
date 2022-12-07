@@ -9,3 +9,4 @@ export FQDN=$1
 export SERVER=`jq -r ".fqdn_list.\"$FQDN\".server" < ~/.ksctl/ksctl.env.json`
 
 envsubst < $(dirname $0)/_uninstall_ssl_certificate.sh | ssh root@$SERVER bash
+envsubst < `dirname $0`/../update_state/fqdns.sh | bash

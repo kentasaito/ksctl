@@ -19,3 +19,5 @@ sed -i s/ks_example/$APPLICATION/ design/entry_point/manifest.json
 git init
 git remote add origin deno@$SERVER:~/$APPLICATION.git
 git add -A; git commit -m "`date '+%Y-%m-%d %H:%M:%S'`"
+
+envsubst < `dirname $0`/../update_state/local_repository.sh | bash

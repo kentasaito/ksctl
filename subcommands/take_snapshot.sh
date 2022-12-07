@@ -27,7 +27,7 @@ do
 	sqlite3 ~/.ksctl/states.db "insert into fqdns (fqdn, server) values ('$FQDN', '$SERVER')"
 	export FQDN
 	export SERVER
-	envsubst < `dirname $0`/../update_state/fqdns.sh | bash
+	envsubst < `dirname $0`/../update_state/ssl_certificate.sh | bash
 done
 
 sqlite3 ~/.ksctl/states.db 'create table applications (l_r, l_d, r_r, r_d, l_port, r_port, application primary key, fqdn)'
