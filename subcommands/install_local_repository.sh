@@ -14,7 +14,6 @@ export LOCAL_DIRECTORY=`jq -r ".server_list.\"$SERVER\".local_directory" < ~/.ks
 git clone $ORIGIN $LOCAL_DIRECTORY/$APPLICATION
 cd $LOCAL_DIRECTORY/$APPLICATION
 rm -rf .git
-sed -i s/ks_example/$APPLICATION/ design/entry_point/index.html
 sed -i s/ks_example/$APPLICATION/ design/entry_point/manifest.json
 git init
 git remote add origin deno@$SERVER:~/$APPLICATION.git
