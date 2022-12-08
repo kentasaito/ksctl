@@ -18,17 +18,8 @@ Usage:
 	ksctl [Subcommand] [(server|fqdn|application)]
 
 Subcommands:
-	show_local_directory_list
-		Show local directory list
-
-	show_server_list
-		Show server list with state
-
-	show_fqdn_list
-		Show FQDN list with state
-
-	show_application_list
-		Show application list with state
+	show_states
+		show local directories, servers, FQDNs and applications with states
 
 	(install|uninstall)_deno_user [server]
 		Install / Uninstall deno user on the server
